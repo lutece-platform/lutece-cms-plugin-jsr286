@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<portlet-app
+    xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+    version="1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+
+<!-- ////////////////////////////////////////////////////////// -->
+<!-- //                                                         -->
+<!-- //   Insert portlet's definitions here                     -->
+<!-- //                                                         -->
+<!-- ////////////////////////////////////////////////////////// -->
+
+<portlet>
+    	<description>Hello World as a portlet app</description>
+		<portlet-name>HelloWorldPortlet</portlet-name>
+	    <display-name>Hello World Portlet</display-name>
+		<portlet-class>org.apache.pluto.examples.HelloWorldPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+            <portlet-mode>VIEW</portlet-mode>
+		</supports>
+	    <supported-locale>en</supported-locale>
+    	<resource-bundle>HelloWorldPortlet</resource-bundle>
+	    <portlet-info>
+			<title>Hello World Portlet</title>
+	    </portlet-info>
+</portlet>
+
+
+<portlet>
+    	<description>Publish event for subscriber</description>
+		<portlet-name>PublishEventPortlet</portlet-name>
+	    <display-name>Publish EventPortlet</display-name>
+		<portlet-class>com.mycomp.portal.jsr286.PublishEventPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+            <portlet-mode>VIEW</portlet-mode>
+		</supports>
+	    <supported-locale>en</supported-locale>    	
+	    <portlet-info>
+			<title>PublishEventPortlet</title>
+	    </portlet-info>	    
+	    <supported-publishing-event>
+			<qname xmlns:mycomp="http://www.mycomp.com/jsr286">mycomp:AppEvent</qname> 
+		</supported-publishing-event>
+</portlet>
+
+<portlet>
+    	<description>Suscribe event </description>
+		<portlet-name>SubscribeEventPortlet</portlet-name>
+	    <display-name>Subscribe EventPortlet</display-name>
+		<portlet-class>com.mycomp.portal.jsr286.SubscribeEventPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+            <portlet-mode>VIEW</portlet-mode>
+		</supports>
+	    <supported-locale>en</supported-locale>    	
+	    <portlet-info>
+			<title>SubscribeEventPortlet</title>
+	    </portlet-info>
+	    <supported-processing-event>
+			<qname xmlns:mycomp="http://www.mycomp.com/jsr286">mycomp:AppEvent</qname> 
+		</supported-processing-event>
+		
+		
+	    	    
+</portlet>
+
+<event-definition>
+		<qname xmlns:mycomp="http://www.mycomp.com/jsr286">mycomp:AppEvent</qname> 
+		<value-type>com.mycomp.portal.jsr286.WrapperEvent</value-type> 
+</event-definition>
+
+
+  
+</portlet-app>
