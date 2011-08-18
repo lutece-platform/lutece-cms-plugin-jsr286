@@ -9,7 +9,7 @@
 	<groupId>fr.paris.lutece.plugins</groupId>
 	<artifactId>plugin-jsr286</artifactId>
 	<packaging>lutece-plugin</packaging>
-	<version>2.0.5</version>
+	<version>2.0.6-SNAPSHOT</version>
 	<name>Lutece jsr286 plugin</name>
 	
 	<repositories>
@@ -110,8 +110,8 @@
 		<jiraComponentId>10252</jiraComponentId>
 	</properties>
     <scm>
-        <connection>scm:svn:http://dev.lutece.paris.fr/svn/lutece/portal/tags/plugin-jsr286-2.0.5</connection>
-        <developerConnection>scm:svn:https://dev.lutece.paris.fr/svn/lutece/portal/tags/plugin-jsr286-2.0.5</developerConnection>
-        <url>http://dev.lutece.paris.fr/viewvc/lutece/portal/tags/plugin-jsr286-2.0.5</url>
+        <connection>scm:svn:http://dev.lutece.paris.fr/svn/lutece/portal/trunk/plugins/cms/plugin-jsr286</connection>
+        <developerConnection>scm:svn:https://dev.lutece.paris.fr/svn/lutece/portal/trunk/plugins/cms/plugin-jsr286</developerConnection>
+        <url>http://dev.lutece.paris.fr/viewvc/lutece/portal/trunk/plugins/cms/plugin-jsr286</url>
     </scm>
 </project>
