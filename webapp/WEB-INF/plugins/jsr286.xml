@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<plug-in>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><plug-in>
 
    <!-- Plugin Informations -->
    <name>jsr-286</name>
    <class>fr.paris.lutece.portal.service.plugin.PluginDefaultImplementation</class>
-   <version>2.0.15</version>
-   <documentation></documentation>
-   <installation></installation>
-   <changes></changes>
-   <user-guide></user-guide>
+   <version>2.0.5</version>
+   <documentation/>
+   <installation/>
+   <changes/>
+   <user-guide/>
    <description>jsr-286.plugin.description</description>
    <provider>jsr-286.plugin.provider</provider>
    <provider-url>http://lutece.paris.fr</provider-url>
@@ -30,14 +29,11 @@
            <portlet-modify-script-template>/admin/portlet/script_modify_portlet.html</portlet-modify-script-template>
            <portlet-create-specific-template>/admin/plugins/jsr286/portlet_jsr286.html</portlet-create-specific-template>
            <portlet-modify-specific-template>/admin/plugins/jsr286/portlet_jsr286.html</portlet-modify-specific-template>
-           <portlet-create-specific-form-template></portlet-create-specific-form-template>
-           <portlet-modify-specific-form-template></portlet-modify-specific-form-template>
+           <portlet-create-specific-form-template/>
+           <portlet-modify-specific-form-template/>
      </portlet>
    </portlets>
    
    
 
  </plug-in>
-
-
-
