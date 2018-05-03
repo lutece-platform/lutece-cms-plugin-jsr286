@@ -1,70 +1,63 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<parent>
-	  <artifactId>lutece-plugins-pom</artifactId>
-	  <groupId>fr.paris.lutece.plugins</groupId>
-	  <version>3.7</version>
-	</parent>
-  
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>fr.paris.lutece.plugins</groupId>
-	<artifactId>plugin-jsr286</artifactId>
-	<packaging>lutece-plugin</packaging>
-	<version>2.0.6-SNAPSHOT</version>
-	<name>Lutece jsr286 plugin</name>
-	
-	<repositories>
-		<repository>
-			<id>lutece</id>
-			<name>luteceRepository</name>
-			<url>http://dev.lutece.paris.fr/maven_repository</url>
-			<layout>default</layout>
-		</repository>
-	</repositories>
-	
-	<dependencies>
-	
-		<dependency>
-			<groupId>fr.paris.lutece</groupId>
-			<artifactId>lutece-core</artifactId>
-			<version>[2.2.4,)</version>
-			<type>lutece-core</type>
-		</dependency>			
-		
-		<dependency>
-   			<groupId>fr.paris.lutece.plugins</groupId>
-   			<artifactId>library-jsr286-pluto</artifactId>
-   			<scope>provided</scope>
-   			<version>2.0.0</version>
-		</dependency>			
-		<dependency>
-   			<groupId>org.apache.portals.pluto</groupId>
-			<artifactId>pluto-taglib</artifactId>
-			<version>2.0.0</version>
-		</dependency>
-		<dependency>
-		   <groupId>javax.servlet</groupId>
-		   <artifactId>jstl</artifactId>
-		   <version>1.0.6</version>
-		</dependency>
-		<dependency>
-		   <groupId>taglibs</groupId>
-		   <artifactId>standard</artifactId>
-		   <version>1.1.2</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.portals.bridges</groupId> 
-			<artifactId>portals-bridges-velocity</artifactId> 
-			<version>1.0.4</version> 
-		</dependency>
-		 
-		
-		<dependency>
-   			<groupId>javax.portlet</groupId>
-		  	<artifactId>portlet-api</artifactId>
-		  	<scope>provided</scope>
-		 	<version>2.0</version>
-		</dependency>
-		<dependency>
+    <parent>
+        <artifactId>lutece-global-pom</artifactId>
+        <groupId>fr.paris.lutece.tools</groupId>
+        <version>3.0.12</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>fr.paris.lutece.plugins</groupId>
+    <artifactId>plugin-jsr286</artifactId>
+    <packaging>lutece-plugin</packaging>
+    <version>2.0.6-SNAPSHOT</version>
+    <name>Lutece jsr286 plugin</name>
+    <repositories>
+        <repository>
+            <id>lutece</id>
+            <name>luteceRepository</name>
+            <url>http://dev.lutece.paris.fr/maven_repository</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>fr.paris.lutece</groupId>
+            <artifactId>lutece-core</artifactId>
+            <version>[2.2.4,)</version>
+            <type>lutece-core</type>
+        </dependency>
+        <dependency>
+            <groupId>fr.paris.lutece.plugins</groupId>
+            <artifactId>library-jsr286-pluto</artifactId>
+            <scope>provided</scope>
+            <version>2.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.portals.pluto</groupId>
+            <artifactId>pluto-taglib</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.0.6</version>
+        </dependency>
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.portals.bridges</groupId>
+            <artifactId>portals-bridges-velocity</artifactId>
+            <version>1.0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.portlet</groupId>
+            <artifactId>portlet-api</artifactId>
+            <scope>provided</scope>
+            <version>2.0</version>
+        </dependency>
+        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.5.8</version>
@@ -79,13 +72,10 @@
             <artifactId>jcl-over-slf4j</artifactId>
             <version>1.5.8</version>
         </dependency>
-		
-		
-		
-	</dependencies>
-	<build>
-	<plugins>
-		<plugin>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.1-beta-1</version>
                 <configuration>
@@ -100,18 +90,17 @@
                         </resource>
                     </webResources>
                 </configuration>
-           </plugin>
-    </plugins>
-	</build>
-	
-	<properties>
-		<componentName>jsr286</componentName>
-		<jiraProjectName>JSRPORTLETT</jiraProjectName>
-		<jiraComponentId>10252</jiraComponentId>
-	</properties>
+            </plugin>
+        </plugins>
+    </build>
+    <properties>
+        <componentName>jsr286</componentName>
+        <jiraProjectName>JSRPORTLETT</jiraProjectName>
+        <jiraComponentId>10252</jiraComponentId>
+    </properties>
     <scm>
-        <connection>scm:svn:http://dev.lutece.paris.fr/svn/lutece/portal/trunk/plugins/cms/plugin-jsr286</connection>
-        <developerConnection>scm:svn:https://dev.lutece.paris.fr/svn/lutece/portal/trunk/plugins/cms/plugin-jsr286</developerConnection>
-        <url>http://dev.lutece.paris.fr/viewvc/lutece/portal/trunk/plugins/cms/plugin-jsr286</url>
+        <connection>scm:git:https://github.com/lutece-platform/lutece-cms-plugin-jsr286.git</connection>
+        <developerConnection>scm:git:https://github.com/lutece-platform/lutece-cms-plugin-jsr286.git</developerConnection>
+        <url>https://github.com/lutece-platform/lutece-cms-plugin-jsr286.git</url>
     </scm>
 </project>
